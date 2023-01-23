@@ -1,20 +1,38 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
 
-/* Provide sufficient contrast against white background */
+:root {
+  --layout-size: 40px;
+  --layout-gap: 8px;
+  --color-bg: #F7F7F7;
+  --color-fg: white;
+  --color-main: rgb(0,0,32);
+  --shadow-pop: 4px 4px 0px 0px rgba(0,0,0,0.5);
+  --scale-pop: 1.05;
+  --scale-push: 0.95;
+  --transition-duration: 0.15s;
+}
+
+html, body, app-root {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+html {
+  background: var(--color-bg);
+}
+
+app-root {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+}
+
 a {
-  color: #0366d6;
-}
-
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
-}
-
-code {
-  color: #e01a76;
-}
-
-.btn-primary {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+  text-decoration: none;
+  color: inherit;
 }
